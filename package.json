@@ -1,7 +1,7 @@
 {
   "name": "@react-element/bg-music",
   "private": false,
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2-alpha.1",
   "description": "React (微信) 背景音乐",
   "author": "jf3096",
   "license": "MIT",
