@@ -31,8 +31,7 @@
     "deploy": "gh-pages -d example/build",
     "prerelease-alpha": "release-it --preRelease=alpha",
     "prerelease-beta": "release-it --preRelease=beta",
-    "release": "npm run prepare && release-it minor",
-    "copy-resources": "cpx \"src/**/*.png\" dist"
+    "release": "npm run prepare && release-it minor"
   },
   "dependencies": {
     "classnames": "^2.2.6",
