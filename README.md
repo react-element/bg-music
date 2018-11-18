@@ -2,8 +2,6 @@
 
 > react (微信) 背景音乐, 详细文档后续补全
 
-[![NPM](https://img.shields.io/npm/v/rc-bg-music.svg)](https://www.npmjs.com/package/rc-bg-music) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## Install
 
 ```bash
@@ -25,6 +23,11 @@ class Example extends React.Component {
   }
 }
 ```
+
+## ChangeLog
+
+## 0.0.1 (2018-11-18)
+* feat: init commit
 
 ## License
 
