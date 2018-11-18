@@ -30,8 +30,8 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "prerelease-alpha": "release-it --preRelease=alpha",
-    "prerelease-beta": "release-it --preRelease=beta",
+    "prerelease-alpha": "npm run prepare && release-it --preRelease=alpha",
+    "prerelease-beta": "npm run prepare && release-it --preRelease=beta",
     "release": "npm run prepare && release-it minor"
   },
   "dependencies": {
@@ -45,6 +45,7 @@
     "react-dom": "^16.6.0"
   },
   "devDependencies": {
+    "@react-element/suspend-till-window-onload": "^1.0.1-alpha.0",
     "@svgr/rollup": "^2.4.1",
     "@types/classnames": "^2.2.6",
     "@types/jest": "^23.1.5",

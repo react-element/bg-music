@@ -3,10 +3,9 @@ import cx from 'classnames';
 import withoutProps from 'without-props';
 import { isWeixin } from './utils';
 import Default from './default';
-// import DelayLoad from './components/delay-load';
-import SuspendTillWindowOnload from './components/suspend-till-window-onload';
 
 import './bg-music.less';
+import SuspendTillWindowOnload from '@react-element/suspend-till-window-onload';
 
 export type Props = {
   src: string;
