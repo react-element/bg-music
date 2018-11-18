@@ -3,7 +3,6 @@ import cx from 'classnames';
 import withoutProps from 'without-props';
 import { isWeixin } from './utils';
 import Default from './default';
-
 // import DelayLoad from './components/delay-load';
 import SuspendTillWindowOnload from './components/suspend-till-window-onload';
 
@@ -167,9 +166,11 @@ export default class BgMusic extends React.Component<Props, State> {
   renderPlayContent(isHidden?: boolean) {
     const { rotate, playContent, prefixCls } = this.props;
     return (
-      <div className={cx(`${prefixCls}-play-content`, rotate && `${prefixCls}-rotate`, isHidden && `${prefixCls}-hide1`)}>
-        {playContent}
-      </div>
+      <SuspendTillWindowOnload resolve={!isHidden}>
+        <div className={cx(`${prefixCls}-play-content`, rotate && `${prefixCls}-rotate`, isHidden && `${prefixCls}-hide`)}>
+          {playContent}
+        </div>
+      </SuspendTillWindowOnload>
     );
   }
 
@@ -180,7 +181,7 @@ export default class BgMusic extends React.Component<Props, State> {
     const { pauseContent, prefixCls } = this.props;
     return (
       <SuspendTillWindowOnload resolve={!isHidden}>
-        <div className={cx(isHidden && `${prefixCls}-hide1`)}>
+        <div className={cx(isHidden && `${prefixCls}-hide`)}>
           {pauseContent}
         </div>
       </SuspendTillWindowOnload>
