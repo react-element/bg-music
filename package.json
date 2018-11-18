@@ -1,0 +1,76 @@
+{
+  "name": "@react-element/bg-music",
+  "version": "0.0.1",
+  "description": "React (微信) 背景音乐",
+  "author": "jf3096",
+  "license": "MIT",
+  "repository": "react-element/bg-music",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "keywords": [
+    "wechat",
+    "weixin",
+    "bg-music",
+    "background-music",
+    "react component",
+    "react bg music"
+  ],
+  "scripts": {
+    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "start-example": "cd example && npm start",
+    "prepare": "yarn run build",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build",
+    "prerelease-alpha": "release-it --preRelease=alpha",
+    "prerelease-beta": "release-it --preRelease=beta",
+    "release": "npm run prepare && release-it minor",
+    "copy-resources": "cpx \"src/**/*.png\" dist"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "rollup-plugin-ignore-import": "^1.1.0",
+    "without-props": "^1.0.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "@svgr/rollup": "^2.4.1",
+    "@types/classnames": "^2.2.6",
+    "@types/jest": "^23.1.5",
+    "@types/react": "16.7.6",
+    "@types/react-dom": "^16.0.9",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.4",
+    "gh-pages": "^1.2.0",
+    "less": "^3.8.1",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-scripts-ts": "^2.16.0",
+    "release": "^4.0.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-image-files": "^1.2.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "dist"
+  ]
+}

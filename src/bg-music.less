@@ -1,0 +1,36 @@
+@prefixCls: xc-bg-music;
+
+.@{prefixCls} {
+  display: inline-block;
+  font-size: 0;
+
+  &-play-content {
+    will-change: transform;
+  }
+
+  &:active {
+    opacity: .8;
+  }
+
+  &-rotate {
+    -webkit-backface-visibility: hidden;
+    animation: xc-bg-music-rotation 3000ms linear infinite;
+  }
+
+  &-audio {
+    display: none;
+  }
+
+  &-hide {
+    display: none;
+  }
+}
+
+@keyframes xc-bg-music-rotation {
+  0% {
+    transform: translateZ(0) rotate(0deg);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
